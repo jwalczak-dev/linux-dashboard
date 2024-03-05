@@ -6,7 +6,11 @@ import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component"
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavigationBarComponent],
-  templateUrl: './app.component.html',
+  template: `
+    <h1>{{ title }}</h1>
+    <app-navigation-bar></app-navigation-bar>
+    <router-outlet/>
+  `,
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
