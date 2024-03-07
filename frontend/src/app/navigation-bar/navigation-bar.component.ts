@@ -1,14 +1,15 @@
 import {Component} from '@angular/core';
 import {NgFor} from '@angular/common';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navigation-bar',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   template: `
     <div class="navigation-bar-container">
       <ul>
-        <li *ngFor="let tab of tabs">{{tab}}</li>
+        <li *ngFor="let tab of tabs" routerLink="/{{tab}}">{{tab}}</li>
       </ul>
     </div>
   `,
