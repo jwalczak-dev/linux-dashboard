@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {NgFor} from '@angular/common';
 import {RouterLink} from "@angular/router";
 
@@ -13,7 +13,8 @@ import {RouterLink} from "@angular/router";
       </ul>
     </div>
   `,
-  styleUrl: './navigation-bar.component.scss'
+  styleUrl: './navigation-bar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationBarComponent {
   tabs: string[] = ['System', 'Network', 'Logs'];
