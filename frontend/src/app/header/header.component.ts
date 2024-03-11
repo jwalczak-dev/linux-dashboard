@@ -4,7 +4,9 @@ import {ChangeDetectionStrategy, Component, input} from '@angular/core';
   selector: 'app-header',
   standalone: true,
   imports: [],
-  templateUrl: './header.component.html',
+  template: `
+    <h1>{{ title() }}</h1>
+  `,
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
