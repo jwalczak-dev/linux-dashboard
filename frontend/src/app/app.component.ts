@@ -9,10 +9,16 @@ import {FooterComponent} from "./footer/footer.component";
   standalone: true,
   imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent],
   template: `
-    <app-header [title]="title"></app-header>
-    <app-navigation-bar></app-navigation-bar>
-    <router-outlet/>
-    <app-footer></app-footer>
+    <div class="header-container">
+      <app-header [title]="title"></app-header>
+    </div>
+    <div class="center-container">
+      <app-navigation-bar></app-navigation-bar>
+      <router-outlet/>
+    </div>
+    <div class="footer-container">
+      <app-footer></app-footer>
+    </div>
   `,
   styleUrl: './app.component.scss'
 })
