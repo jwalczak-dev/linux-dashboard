@@ -13,8 +13,12 @@ import {FooterComponent} from "./footer/footer.component";
       <app-header [title]="title"></app-header>
     </div>
     <div class="center-container">
-      <app-navigation-bar></app-navigation-bar>
-      <router-outlet/>
+      <div class="navigation-bar-container">
+        <app-navigation-bar></app-navigation-bar>
+      </div>
+      <div class="content-container">
+        <router-outlet/>
+      </div>
     </div>
     <div class="footer-container">
       <app-footer></app-footer>

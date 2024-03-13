@@ -7,11 +7,9 @@ import {RouterLink} from "@angular/router";
   standalone: true,
   imports: [NgFor, RouterLink],
   template: `
-    <div class="navigation-bar-container">
       <ul>
         <li *ngFor="let tab of tabs" routerLink="/{{tab}}">{{tab}}</li>
       </ul>
-    </div>
   `,
   styleUrl: './navigation-bar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
