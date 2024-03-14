@@ -21,7 +21,7 @@ import {FooterComponent} from "./footer/footer.component";
       </div>
     </div>
     <div class="footer-container">
-      <app-footer></app-footer>
+      <app-footer [title]="title"></app-footer>
     </div>
   `,
   styleUrl: './app.component.scss'
