@@ -7,6 +7,7 @@ import {Observable, Subject} from "rxjs";
 export class DataService {
 
   #cpuUsageData$ = new Subject<any>();
+  #ramUsageData$ = new Subject<any>();
 
   constructor() { }
 
@@ -16,6 +17,14 @@ export class DataService {
 
   updateCpuUsageData(data: any): void {
     this.#cpuUsageData$.next(data)
+  }
+
+  getRamUsageData(): Observable<any> {
+    return this.#ramUsageData$.asObservable()
+  }
+
+  updateRamUsageData(data: any): void {
+    this.#ramUsageData$.next(data)
   }
 
 
