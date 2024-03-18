@@ -8,6 +8,7 @@ export class DataService {
 
   #cpuUsageData$ = new Subject<any>();
   #ramUsageData$ = new Subject<any>();
+  #diskSpaceUsageData$ = new Subject<any>();
 
   constructor() { }
 
@@ -25,6 +26,14 @@ export class DataService {
 
   updateRamUsageData(data: any): void {
     this.#ramUsageData$.next(data)
+  }
+
+  getDiskSpaceUsageData(): Observable<any> {
+    return this.#diskSpaceUsageData$.asObservable()
+  }
+
+  updateDiskSpaceUsageData(data: any): void {
+    this.#diskSpaceUsageData$.next(data)
   }
 
 
