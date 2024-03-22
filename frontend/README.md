@@ -4,5 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Info
 
-Aplikacja frontendowa dla wizualizacji zasobów serwera Linux
+Aplikacja frontendowa do monitorowania i wizualizacji zasobów serwera Linux
 
