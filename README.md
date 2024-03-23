@@ -15,6 +15,7 @@ Tworząc ten projekt chciałbym przede wszystkim poznać/podszkolić się w nast
 - Angular
     - Lepiej poznać nowe funkcje wprowadzane do frameworka od wersji 15
     - Nowa składnia
+    - Poznać i stosować Angular Material
 
 - Go
     - Poznać ten język programowania
