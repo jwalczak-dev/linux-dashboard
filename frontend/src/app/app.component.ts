@@ -13,7 +13,7 @@ import {MatToolbar} from "@angular/material/toolbar";
   imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent, MatSidenavContainer, MatSidenavContent, MatSidenav, MatButton, MatToolbar],
   template: `
     <mat-sidenav-container fullscreen>
-      <mat-sidenav mode="side" #sidenav>
+      <mat-sidenav mode="side" #sidenav class="container">
         <div class="navigation-bar-container">
           <app-navigation-bar></app-navigation-bar>
         </div>
