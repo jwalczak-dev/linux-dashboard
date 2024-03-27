@@ -1,8 +1,14 @@
 .navigation-list {
   list-style: none;
   padding: 0;
+  width: 300px;
 
   .navigation-element {
     padding: 10px;
+    border-bottom: 1px solid lightgray;
+
+    &:hover {
+      background-color: lavender;
+    }
   }
 }
