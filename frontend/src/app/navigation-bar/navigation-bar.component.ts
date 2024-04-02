@@ -15,6 +15,6 @@ import {RouterLink} from "@angular/router";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavigationBarComponent {
-  tabs: string[] = ['System', 'Network', 'Logs', 'About'];
+  tabs: string[] = ['System', 'Disk', 'Network', 'Logs', 'About'];
 
 }
