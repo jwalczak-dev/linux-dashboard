@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-disk',
   standalone: true,
   imports: [],
-  templateUrl: './disk.component.html',
+  template: `
+    <p>disk works!</p>
+  `,
   styleUrl: './disk.component.scss'
 })
 export class DiskComponent {
