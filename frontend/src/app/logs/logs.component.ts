@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-logs',
   standalone: true,
   imports: [],
-  templateUrl: './logs.component.html',
+  template: `
+    <p>logs works!</p>
+  `,
   styleUrl: './logs.component.scss'
 })
 export class LogsComponent {
