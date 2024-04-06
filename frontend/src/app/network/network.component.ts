@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-network',
   standalone: true,
   imports: [],
-  templateUrl: './network.component.html',
+  template: `
+    <p>network works!</p>
+  `,
   styleUrl: './network.component.scss'
 })
 export class NetworkComponent {
