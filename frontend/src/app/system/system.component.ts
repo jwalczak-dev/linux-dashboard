@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-system',
   standalone: true,
   imports: [],
-  templateUrl: './system.component.html',
+  template: `
+    <p>system works!</p>
+  `,
   styleUrl: './system.component.scss'
 })
 export class SystemComponent {
