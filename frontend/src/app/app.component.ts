@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {HeaderComponent} from "./header/header.component";
@@ -6,11 +6,12 @@ import {FooterComponent} from "./footer/footer.component";
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
 import {MatButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
+import {LoadingComponent} from "./loading/loading.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent, MatSidenavContainer, MatSidenavContent, MatSidenav, MatButton, MatToolbar],
+  imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent, MatSidenavContainer, MatSidenavContent, MatSidenav, MatButton, MatToolbar, LoadingComponent],
   template: `
     <mat-sidenav-container fullscreen>
       <mat-sidenav mode="side" #sidenav class="container">
@@ -18,7 +19,7 @@ import {MatToolbar} from "@angular/material/toolbar";
           <app-navigation-bar></app-navigation-bar>
         </div>
       </mat-sidenav>
-      <mat-sidenav-content >
+      <mat-sidenav-content>
         <mat-toolbar color="primary">
           <div class="header-container">
             <app-header [title]="title"></app-header>
@@ -27,18 +28,30 @@ import {MatToolbar} from "@angular/material/toolbar";
 
         <div class="center-container container">
           <div class="content-container">
-            <p><button mat-button (click)="sidenav.toggle()">Menu</button></p>
+            <p>
+              <button mat-button (click)="sidenav.toggle()">Menu</button>
+            </p>
             <router-outlet/>
           </div>
         </div>
         <div class="footer-container container">
           <app-footer [title]="title"></app-footer>
         </div>
+        @if (showLoader) {
+          <app-loading></app-loading>
+        }
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Linux Dashboard';
+  showLoader: boolean = true;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.showLoader = false;
+    }, 3000)
+  }
 }

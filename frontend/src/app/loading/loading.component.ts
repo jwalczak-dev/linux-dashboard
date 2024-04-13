@@ -8,7 +8,9 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     MatProgressSpinner
   ],
   template: `
-    <mat-spinner></mat-spinner>
+    <div class="loader-overlay">
+      <mat-spinner></mat-spinner>
+    </div>
   `,
   styleUrl: './loading.component.scss'
 })
