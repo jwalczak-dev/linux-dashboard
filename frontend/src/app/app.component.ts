@@ -50,8 +50,6 @@ export class AppComponent implements OnInit {
   showLoader: boolean = true;
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.showLoader = false;
-    }, 3000)
+
   }
 }
