@@ -47,5 +47,5 @@ import {LoadingComponent} from "./loading/loading.component";
 })
 export class AppComponent {
   title = 'Linux Dashboard';
-  showLoader: boolean = true;
+  showLoader = true;
 }
