@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {HeaderComponent} from "./header/header.component";
@@ -37,7 +37,7 @@ import {LoadingComponent} from "./loading/loading.component";
         <div class="footer-container container">
           <app-footer [title]="title"></app-footer>
         </div>
-        @if (showLoader) {
+        @if (showLoader()) {
           <app-loading></app-loading>
         }
       </mat-sidenav-content>
@@ -47,5 +47,11 @@ import {LoadingComponent} from "./loading/loading.component";
 })
 export class AppComponent {
   title = 'Linux Dashboard';
-  showLoader = true;
+  showLoader = signal(true);
+
+  ngOnInit(): void {
+    setInterval(() => {
+      this.showLoader.update((value) => false)
+    }, 1000)
+  }
 }
