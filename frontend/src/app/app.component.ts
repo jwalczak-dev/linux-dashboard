@@ -52,6 +52,6 @@ export class AppComponent {
   ngOnInit(): void {
     setInterval(() => {
       this.showLoader.update((value) => false)
-    }, 1000)
+    }, 2000)
   }
 }
