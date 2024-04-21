@@ -20,26 +20,29 @@ import {LoadingComponent} from "./loading/loading.component";
         </div>
       </mat-sidenav>
       <mat-sidenav-content>
-        <mat-toolbar color="primary">
-          <div class="header-container">
-            <app-header [title]="title"></app-header>
-          </div>
-        </mat-toolbar>
+        <div class="page-container">
+          <mat-toolbar color="primary">
+            <div class="header-container">
+              <app-header [title]="title"></app-header>
+            </div>
+          </mat-toolbar>
 
-        <div class="center-container container">
-          <div class="content-container">
-            <p>
-              <button mat-button (click)="sidenav.toggle()">Menu</button>
-            </p>
-            <router-outlet/>
+          <div class="center-container container">
+            <div class="content-container">
+              <p>
+                <button mat-button (click)="sidenav.toggle()">Menu</button>
+              </p>
+              <router-outlet/>
+            </div>
           </div>
+          <div class="footer-container container">
+            <app-footer [title]="title"></app-footer>
+          </div>
+          @if (showLoader()) {
+            <app-loading></app-loading>
+          }
         </div>
-        <div class="footer-container container">
-          <app-footer [title]="title"></app-footer>
-        </div>
-        @if (showLoader()) {
-          <app-loading></app-loading>
-        }
+
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,

@@ -3,3 +3,13 @@
   box-sizing: border-box;
   padding: 0 16px;
 }
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .center-container {
+    flex-grow: 1;
+  }
+}
