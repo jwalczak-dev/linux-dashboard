@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {HeaderComponent} from "./header/header.component";
@@ -48,7 +48,7 @@ import {LoadingComponent} from "./loading/loading.component";
   `,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Linux Dashboard';
   showLoader = signal(true);
 
