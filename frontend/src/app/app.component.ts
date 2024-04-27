@@ -1,4 +1,4 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, ContentChild, ElementRef, OnInit, signal, ViewChild} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {HeaderComponent} from "./header/header.component";
@@ -13,7 +13,7 @@ import {LoadingComponent} from "./loading/loading.component";
   standalone: true,
   imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent, MatSidenavContainer, MatSidenavContent, MatSidenav, MatButton, MatToolbar, LoadingComponent],
   template: `
-    <mat-sidenav-container fullscreen>
+    <mat-sidenav-container fullscreen #sidenav2>
       <mat-sidenav mode="side" #sidenav class="container">
         <div class="navigation-bar-container">
           <app-navigation-bar></app-navigation-bar>
@@ -23,14 +23,14 @@ import {LoadingComponent} from "./loading/loading.component";
         <div class="page-container">
           <mat-toolbar color="primary">
             <div class="header-container">
-              <app-header [title]="title"></app-header>
+              <app-header [title]="title" (menuButtonClick)="sidenavToggle()"></app-header>
             </div>
           </mat-toolbar>
 
           <div class="center-container container">
             <div class="content-container">
               <p>
-                <button mat-button (click)="sidenav.toggle()">Menu</button>
+                <button mat-button (click)="sidenavToggle()">Menu</button>
               </p>
               <router-outlet/>
             </div>
@@ -52,9 +52,15 @@ export class AppComponent implements OnInit {
   title = 'Linux Dashboard';
   showLoader = signal(true);
 
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
   ngOnInit(): void {
     setInterval(() => {
       this.showLoader.update((value) => false)
     }, 1500)
+  }
+
+  sidenavToggle() {
+    this.sidenav.toggle()
   }
 }
