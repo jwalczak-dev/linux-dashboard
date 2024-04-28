@@ -13,7 +13,7 @@ import {LoadingComponent} from "./loading/loading.component";
   standalone: true,
   imports: [RouterOutlet, NavigationBarComponent, HeaderComponent, FooterComponent, MatSidenavContainer, MatSidenavContent, MatSidenav, MatButton, MatToolbar, LoadingComponent],
   template: `
-    <mat-sidenav-container fullscreen #sidenav2>
+    <mat-sidenav-container fullscreen>
       <mat-sidenav mode="side" #sidenav class="container">
         <div class="navigation-bar-container">
           <app-navigation-bar></app-navigation-bar>
@@ -29,9 +29,6 @@ import {LoadingComponent} from "./loading/loading.component";
 
           <div class="center-container container">
             <div class="content-container">
-              <p>
-                <button mat-button (click)="sidenavToggle()">Menu</button>
-              </p>
               <router-outlet/>
             </div>
           </div>
