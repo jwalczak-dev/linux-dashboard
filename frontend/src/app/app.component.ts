@@ -22,11 +22,8 @@ import {LoadingComponent} from "./loading/loading.component";
       <mat-sidenav-content>
         <div class="page-container">
           <mat-toolbar color="primary">
-            <div class="header-container">
               <app-header [title]="title" (menuButtonClick)="sidenavToggle()"></app-header>
-            </div>
           </mat-toolbar>
-
           <div class="center-container container">
             <div class="content-container">
               <router-outlet/>

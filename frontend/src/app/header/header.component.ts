@@ -8,7 +8,7 @@ import {MatButton} from "@angular/material/button";
     MatButton
   ],
   template: `
-    <div>
+    <div class="header-container">
       <button mat-button (click)="toggle()">Menu</button>
       <h1>{{ title() }}</h1>
     </div>
