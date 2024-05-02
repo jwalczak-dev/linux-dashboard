@@ -1,15 +1,16 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, input, Output} from '@angular/core';
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatButtonModule} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    MatButton
+    MatButtonModule, MatIcon
   ],
   template: `
     <div class="header-container">
-      <button mat-button (click)="toggle()" class="menu-button">Menu</button>
+      <button mat-button (click)="toggle()" class="menu-button"><mat-icon>menu</mat-icon></button>
       <h1>{{ title() }}</h1>
     </div>
   `,
