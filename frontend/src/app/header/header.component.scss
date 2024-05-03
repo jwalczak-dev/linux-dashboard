@@ -4,6 +4,10 @@
 
   button.menu-button {
     border: 1px solid lightgray;
+
+    .menu-button-icon {
+      margin: 0;
+    }
   }
 
   h1 {

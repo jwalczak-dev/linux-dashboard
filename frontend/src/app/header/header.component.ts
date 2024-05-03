@@ -10,7 +10,7 @@ import {MatIcon} from "@angular/material/icon";
   ],
   template: `
     <div class="header-container">
-      <button mat-button (click)="toggle()" class="menu-button"><mat-icon>menu</mat-icon></button>
+      <button mat-button (click)="toggle()" class="menu-button"><mat-icon class="menu-button-icon">menu</mat-icon></button>
       <h1>{{ title() }}</h1>
     </div>
   `,
