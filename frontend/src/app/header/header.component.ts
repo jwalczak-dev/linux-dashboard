@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, input, Output} from '@angular/core';
-import {MatButton, MatButtonModule} from "@angular/material/button";
+import {MatButtonModule} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 
 @Component({
