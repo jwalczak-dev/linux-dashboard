@@ -5,7 +5,9 @@ import {Component} from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>about works!</p>
+    <h2>Linux Dashboard</h2>
+    <p>About project:</p>
+    <p>An application used to monitor the performance of the Linux operating system via a web browser.</p>
   `,
   styleUrl: './about.component.scss'
 })
