@@ -16,7 +16,7 @@ import {LoadingComponent} from "./loading/loading.component";
     <mat-sidenav-container fullscreen>
       <mat-sidenav mode="side" #sidenav class="container">
         <div class="navigation-bar-container">
-          <app-navigation-bar></app-navigation-bar>
+          <app-navigation-bar [closeSidenavFunc]="closeSidenavFunc"></app-navigation-bar>
         </div>
       </mat-sidenav>
       <mat-sidenav-content>
@@ -46,6 +46,10 @@ export class AppComponent implements OnInit {
   title = 'Linux Dashboard';
   showLoader = signal(true);
 
+  get closeSidenavFunc() {
+    return this.closeSidenav.bind(this)
+  }
+
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
   ngOnInit(): void {
@@ -56,5 +60,9 @@ export class AppComponent implements OnInit {
 
   sidenavToggle() {
     this.sidenav.toggle()
+  }
+
+  closeSidenav() {
+    this.sidenav.close();
   }
 }

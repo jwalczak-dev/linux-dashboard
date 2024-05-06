@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {NgFor} from '@angular/common';
 import {RouterLink} from "@angular/router";
 
@@ -9,7 +9,7 @@ import {RouterLink} from "@angular/router";
   template: `
       <ul class="navigation-list">
         @for (tab of tabs; track $index) {
-          <li routerLink="/{{tab.toLowerCase()}}" class="navigation-element">{{tab}}</li>
+          <li routerLink="/{{tab.toLowerCase()}}" class="navigation-element" (click)="onNavItemClick()">{{tab}}</li>
         }
       </ul>
   `,
@@ -19,4 +19,9 @@ import {RouterLink} from "@angular/router";
 export class NavigationBarComponent {
   tabs: string[] = ['System', 'Disk', 'Network', 'Logs', 'About'];
 
+  @Input() closeSidenavFunc!: Function;
+
+  onNavItemClick() {
+    this.closeSidenavFunc();
+  }
 }
