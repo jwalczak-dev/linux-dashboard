@@ -47,22 +47,22 @@ export class AppComponent implements OnInit {
   showLoader = signal(true);
 
   get closeSidenavFunc() {
-    return this.closeSidenav.bind(this)
+    return this.closeSidenav.bind(this);
   }
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
   ngOnInit(): void {
     setInterval(() => {
-      this.showLoader.update((value) => false)
+      this.showLoader.update(() => false)
     }, 1500)
   }
 
-  sidenavToggle() {
-    this.sidenav.toggle()
+  sidenavToggle(): void {
+    this.sidenav.toggle();
   }
 
-  closeSidenav() {
+  closeSidenav(): void {
     this.sidenav.close();
   }
 }
