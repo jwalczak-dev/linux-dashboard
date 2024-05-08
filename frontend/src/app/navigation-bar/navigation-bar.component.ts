@@ -21,7 +21,7 @@ export class NavigationBarComponent {
 
   @Input() closeSidenavFunc!: Function;
 
-  onNavItemClick() {
+  onNavItemClick(): void {
     this.closeSidenavFunc();
   }
 }

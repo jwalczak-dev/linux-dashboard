@@ -20,9 +20,9 @@ import {MatIcon} from "@angular/material/icon";
 export class HeaderComponent {
   title = input<string>('');
 
-  @Output() menuButtonClick = new EventEmitter()
+  @Output() menuButtonClick = new EventEmitter();
 
-  toggle() {
+  toggle(): void {
     this.menuButtonClick.emit();
   }
 

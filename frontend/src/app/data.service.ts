@@ -11,8 +11,6 @@ export class DataService {
   #diskSpaceUsageData$ = new Subject<any>();
   #networkUsageData$ = new Subject<any>();
 
-  constructor() { }
-
   getCpuUsageData(): Observable<any> {
     return this.#cpuUsageData$.asObservable()
   }

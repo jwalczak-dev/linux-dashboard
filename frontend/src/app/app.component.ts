@@ -54,8 +54,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => {
-      this.showLoader.update(() => false)
-    }, 1500)
+      this.showLoader.update(() => false);
+    }, 1500);
   }
 
   sidenavToggle(): void {
