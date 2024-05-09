@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
 
 @Component({
@@ -12,7 +12,8 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
       <mat-spinner></mat-spinner>
     </div>
   `,
-  styleUrl: './loading.component.scss'
+  styleUrl: './loading.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoadingComponent {
 
