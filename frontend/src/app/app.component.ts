@@ -1,4 +1,4 @@
-import {Component, OnInit, signal, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, signal, ViewChild} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavigationBarComponent} from "./navigation-bar/navigation-bar.component";
 import {HeaderComponent} from "./header/header.component";
@@ -40,7 +40,8 @@ import {LoadingComponent} from "./loading/loading.component";
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   title = 'Linux Dashboard';
