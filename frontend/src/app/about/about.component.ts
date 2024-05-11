@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -9,8 +9,9 @@ import {Component} from '@angular/core';
     <p>About project:</p>
     <p>An application used to monitor the performance of the Linux operating system via a web browser.</p>
   `,
-  styleUrl: './about.component.scss'
+  styleUrl: './about.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutComponent {
-
+  
 }
