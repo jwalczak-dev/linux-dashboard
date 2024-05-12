@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-disk',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   template: `
     <p>disk works!</p>
   `,
-  styleUrl: './disk.component.scss'
+  styleUrl: './disk.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DiskComponent {
 
