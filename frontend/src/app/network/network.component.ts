@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-network',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   template: `
     <p>network works!</p>
   `,
-  styleUrl: './network.component.scss'
+  styleUrl: './network.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NetworkComponent {
 
