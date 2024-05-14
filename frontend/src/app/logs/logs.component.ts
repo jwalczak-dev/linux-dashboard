@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-logs',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   template: `
     <p>logs works!</p>
   `,
-  styleUrl: './logs.component.scss'
+  styleUrl: './logs.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LogsComponent {
 
