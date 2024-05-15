@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-system',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   template: `
     <p>system works!</p>
   `,
-  styleUrl: './system.component.scss'
+  styleUrl: './system.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SystemComponent {
 
