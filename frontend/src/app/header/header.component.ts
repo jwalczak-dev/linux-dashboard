@@ -25,6 +25,4 @@ export class HeaderComponent {
   toggle(): void {
     this.menuButtonClick.emit();
   }
-
-
 }
