@@ -22,7 +22,7 @@ import {LoadingComponent} from "./loading/loading.component";
       <mat-sidenav-content>
         <div class="page-container">
           <mat-toolbar color="primary">
-              <app-header [title]="title" (menuButtonClick)="sidenavToggle()"></app-header>
+              <app-header [title]="title()" (menuButtonClick)="sidenavToggle()"></app-header>
           </mat-toolbar>
           <div class="center-container container">
             <div class="content-container">
@@ -30,7 +30,7 @@ import {LoadingComponent} from "./loading/loading.component";
             </div>
           </div>
           <div class="footer-container container">
-            <app-footer [title]="title"></app-footer>
+            <app-footer [title]="title()"></app-footer>
           </div>
           @if (showLoader()) {
             <app-loading></app-loading>
@@ -44,7 +44,7 @@ import {LoadingComponent} from "./loading/loading.component";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  title = 'Linux Dashboard';
+  title = signal('Linux Dashboard');
   showLoader = signal(true);
 
   get closeSidenavFunc() {
