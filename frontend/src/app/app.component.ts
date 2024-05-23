@@ -36,7 +36,6 @@ import {LoadingComponent} from "./loading/loading.component";
             <app-loading></app-loading>
           }
         </div>
-
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
@@ -56,7 +55,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.showLoader.update(() => false);
-    }, 1500);
+    }, 1000);
   }
 
   sidenavToggle(): void {
