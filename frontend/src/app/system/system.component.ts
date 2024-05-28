@@ -5,7 +5,14 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>{{componentHeader()}}</p>
+    <h2>{{componentHeader()}}</h2>
+    <p>General info</p>
+<!--    - hostname-->
+<!--    - os-->
+<!--    - uptime-->
+<!--    - time-->
+
+    <p>Memory info</p>
   `,
   styleUrl: './system.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
