@@ -13,6 +13,10 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 <!--    - time-->
 
     <p>Memory info</p>
+<!--    - total memory-->
+<!--    - memory usage-->
+
+    <p>CPU info</p>
   `,
   styleUrl: './system.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
