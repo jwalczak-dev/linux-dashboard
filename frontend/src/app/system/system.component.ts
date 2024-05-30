@@ -14,6 +14,8 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 
     <p>Memory info</p>
 <!--    - total memory-->
+<!--    - RAM-->
+<!--    - Swap-->
 <!--    - memory usage-->
 
     <p>CPU info</p>
