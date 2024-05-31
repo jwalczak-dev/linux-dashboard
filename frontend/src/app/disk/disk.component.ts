@@ -5,7 +5,8 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>{{componentHeader()}}</p>
+    <h2>{{componentHeader()}}</h2>
+    <p>Disk partitions</p>
   `,
   styleUrl: './disk.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
