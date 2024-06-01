@@ -7,6 +7,9 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   template: `
     <h2>{{componentHeader()}}</h2>
     <p>Disk partitions</p>
+<!--    - number of partitions-->
+<!--    - total space-->
+<!--    - free space-->
   `,
   styleUrl: './disk.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
