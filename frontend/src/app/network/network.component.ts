@@ -6,6 +6,7 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   imports: [],
   template: `
     <p>{{componentHeader()}}</p>
+    <p>Network interfaces</p>
   `,
   styleUrl: './network.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
