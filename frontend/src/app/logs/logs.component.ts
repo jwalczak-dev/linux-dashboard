@@ -6,6 +6,7 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   imports: [],
   template: `
     <p>{{componentHeader()}}</p>
+    <p>Log data</p>
   `,
   styleUrl: './logs.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
