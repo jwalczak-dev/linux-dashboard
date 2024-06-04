@@ -7,6 +7,8 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   template: `
     <p>{{componentHeader()}}</p>
     <p>Network interfaces</p>
+    - list all interfaces
+    - show download/upload 
   `,
   styleUrl: './network.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
