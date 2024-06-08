@@ -9,6 +9,7 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
     <p>Network interfaces</p>
 <!--    - list all interfaces-->
 <!--    - show download/upload -->
+<!--    - show how many data downloaded/uploaded for each interface-->
   `,
   styleUrl: './network.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
