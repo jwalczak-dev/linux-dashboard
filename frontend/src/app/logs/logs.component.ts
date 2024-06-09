@@ -6,7 +6,7 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   imports: [],
   template: `
     <p>{{componentHeader()}}</p>
-    <p>Log data</p>
+    <p>System log data</p>
 <!--    - system logs-->
 <!--    - warnings-->
 <!--    - errors-->
